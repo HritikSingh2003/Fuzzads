@@ -145,13 +145,101 @@ nav a:hover{color:#00a5e0}
     margin-top:35px;
 }
 
-/* FOOTER */
-footer{
-    padding:40px;
-    background:#000;
-    font-size:.95rem;
-    opacity:.85;
+.fancy-subtitle {
+  max-width: 820px;
+  margin: 0 auto 30px;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: center;
+  color: #cfcfcf;
 }
+
+.fancy-subtitle span {
+  color: #4facfe;
+  font-weight: 600;
+}
+
+.fancy-subtitle strong {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fancy-subtitle em {
+  font-style: normal;
+  color: #4facfe;
+  font-weight: 600;
+}
+
+.fancy-subtitle {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* AboutSection*/
+
+.about-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 20px;
+  color: #fff;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+/* Decorative glowing blobs */
+.about-section::before,
+.about-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.about-section::before {
+  width: 400px;
+  height: 400px;
+  background: #00a5e0;
+  top: -100px;
+  left: -100px;
+}
+
+.about-section::after {
+  width: 500px;
+  height: 500px;
+  background: #26017b;
+  bottom: -150px;
+  right: -150px;
+}
+
+/* Optional: subtle floating particles using radial gradient overlay */
+.about-section .overlay-particles {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(79,172,254,0.05), transparent 70%),
+              radial-gradient(circle at 80% 80%, rgba(38,1,123,0.05), transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure content is above everything */
+.about-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+
 
 /* =============== LIGHT MODE =============== */
 body.light-mode{
@@ -495,7 +583,7 @@ font-size:2rem;
 
     <!-- RIGHT IMAGE -->
     <div style="flex:1; min-width:320px; max-width:600px; display:flex; justify-content:center; align-items:center;">
-      <img src="Data Analyst.jpg" 
+      <img src="F.jpg" 
            alt="Digital Marketing Illustration" 
            style="width:100%; max-width:500px; border-radius:20px; box-shadow:0 25px 60px rgba(0,0,0,0.3); transform:translateY(0); transition:0.5s;">
     </div>
@@ -524,7 +612,7 @@ font-size:2rem;
 
     <!-- LEFT IMAGE -->
     <div style="flex:0 0 400px; display:flex; justify-content:center; position:relative;">
-      <img src="Data Analyst.jpg" 
+      <img src="F.jpg" 
            alt="Digital Marketing Illustration" 
            style="width:100%; max-width:400px; border-radius:20px; box-shadow:0 25px 50px rgba(0,0,0,0.5); transition: transform 0.5s, box-shadow 0.5s;">
 
@@ -603,33 +691,152 @@ font-size:2rem;
 </section>
 
 
-<section class="section" id="process">
-<h3>Our Growth Process</h3>
-<div class="cards">
-<div class="card"><h4>01. Research</h4><p>Audience, competitors & market study.</p></div>
-<div class="card"><h4>02. Strategy</h4><p>Custom plan built for scale.</p></div>
-<div class="card"><h4>03. Execute</h4><p>Launch, test & optimize campaigns.</p></div>
-<div class="card"><h4>04. Scale</h4><p>Scale what works profitably.</p></div>
-</div>
+<section class="section dark" id="services">
+  <h3>What We Do Best</h3>
+  <p class="section-subtitle fancy-subtitle">
+  AI-powered marketing systems engineered to
+  <span>attract</span> qualified traffic,
+  <strong>convert</strong> demand into paying customers and
+  <em>scale</em> profitable growth using data-driven execution.
+</p>
+
+
+  <div class="cards services">
+
+    <div class="card">
+      <h4>AI Performance Advertising</h4>
+      <p>
+        High-ROI Google, Meta & YouTube ads powered by real-time data and machine learning.
+      </p>
+      <span>Google Ads • Meta Ads • Funnel Optimization</span>
+    </div>
+
+    <div class="card">
+      <h4>Search Engine Domination</h4>
+      <p>
+        SEO strategies built for long-term traffic, authority and conversion growth.
+      </p>
+      <span>SEO • Content Strategy • Technical SEO</span>
+    </div>
+
+    <div class="card">
+      <h4>Social Media Growth</h4>
+      <p>
+        Content and campaigns that turn attention into engagement and sales.
+      </p>
+      <span>Instagram • LinkedIn • Brand Growth</span>
+    </div>
+
+    <div class="card">
+      <h4>AI Automation & Funnels</h4>
+      <p>
+        Automated lead systems that work 24/7 while you focus on scaling.
+      </p>
+      <span>CRM • WhatsApp AI • Sales Funnels</span>
+    </div>
+
+  </div>
+
+  
 </section>
 
-<section class="section" id="portfolio">
-<h3>Case Studies</h3>
-<div class="cards">
-<div class="card"><h4>E-Commerce Brand</h4><p>🔥 4.2x ROAS<br>📈 180% Growth</p></div>
-<div class="card"><h4>SaaS Startup</h4><p>🚀 12k+ Leads<br>💰 45% CAC ↓</p></div>
-<div class="card"><h4>Local Business</h4><p>📍 Google #1<br>📞 3x Calls</p></div>
-</div>
+
+<section class="section dark" id="why-us">
+  <h3>Why Brands Choose Us</h3>
+  <p class="section-subtitle fancy-subtitle">
+  We don’t chase <span>vanity metrics</span>. We engineer
+  <strong>predictable revenue</strong> using
+  <em>AI, data</em> and performance-driven growth strategies.
+</p>
+
+
+
+  <div class="cards why-us">
+
+    <div class="card">
+      <h4>AI-First Approach</h4>
+      <p>
+        We use AI, automation and real-time data — not guesswork or outdated tactics.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>ROI Over Everything</h4>
+      <p>
+        Clicks don’t matter. Conversions, revenue and profit do.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Transparent Reporting</h4>
+      <p>
+        Live dashboards, clear KPIs and honest performance tracking.
+      </p>
+    </div>
+
+    
+
+    <div class="card">
+      <h4>Fast Execution</h4>
+      <p>
+        No delays, no fluff — campaigns launched and optimized fast.
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>Scalable Systems</h4>
+      <p>
+        We build marketing engines that grow with your business.
+      </p>
+    </div>
+
+  </div>
+
+  
 </section>
 
-<section class="section">
-<h3>What Clients Say</h3>
-<div class="cards">
-<div class="card"><p>“Revenue tripled in just 90 days.”</p><strong>— CEO</strong></div>
-<div class="card"><p>“Finally profitable ads.”</p><strong>— SaaS Founder</strong></div>
-<div class="card"><p>“Best growth partner.”</p><strong>— Marketing Head</strong></div>
-</div>
+
+<section class="section dark" id="testimonials">
+  <h3>What Our Clients Say</h3>
+
+  <p class="section-subtitle fancy-subtitle">
+  Results-driven partnerships that
+  <span>scale revenue</span>,
+  <strong>improve ROI</strong> and
+  <em>outperform</em> expectations for
+  startups, SaaS companies, e-commerce brands and local businesses worldwide.
+</p>
+
+
+  <div class="cards testimonials">
+
+    <div class="card">
+      <p>
+        “Our revenue <strong>tripled in 90 days</strong>. The team built a complete
+        performance system, not just ads.”
+      </p>
+      <strong class="author">— Founder, D2C Brand</strong>
+    </div>
+
+    <div class="card">
+      <p>
+        “We finally achieved <strong>profitable ads</strong> with predictable lead flow.
+        Clear reporting and serious execution.”
+      </p>
+      <strong class="author">— SaaS Founder</strong>
+    </div>
+
+    <div class="card">
+      <p>
+        “Best growth partner we’ve worked with.
+        <strong>ROI-focused, fast and transparent.</strong>”
+      </p>
+      <strong class="author">— Head of Marketing</strong>
+    </div>
+
+  </div>
 </section>
+
 
 <section class="section" id="contact">
 
